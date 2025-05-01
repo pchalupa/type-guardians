@@ -1,12 +1,12 @@
 {
-  "name": "type-guardian",
+  "name": "type-guardians",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "repository": "https://github.com/pchalupa/type-guardian",
-  "homepage": "https://github.com/pchalupa/type-guardian#readme",
+  "repository": "https://github.com/pchalupa/type-guardians",
+  "homepage": "https://github.com/pchalupa/type-guardians#readme",
   "bugs": {
-    "url": "https://github.com/pchalupa/type-guardian/issues"
+    "url": "https://github.com/pchalupa/type-guardians/issues"
   },
   "author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
   "license": "MIT",
