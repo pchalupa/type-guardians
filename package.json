@@ -11,16 +11,6 @@
 	"author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
 	"license": "MIT",
 	"type": "module",
-	"exports": {
-		"./is-number": {
-			"import": "./is-number.ts",
-			"default": "./is-number.ts"
-		},
-		"./is-string": {
-			"import": "./is-string.ts",
-			"default": "./is-string.ts"
-		}
-	},
 	"scripts": {
 		"lint": "biome lint .",
 		"format": "biome format .",
