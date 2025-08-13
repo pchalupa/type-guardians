@@ -33,5 +33,6 @@
 		"@biomejs/biome": "2.1.4",
 		"typescript": "^5.9.2",
 		"vitest": "^3.1.2"
-	}
+	},
+	"packageManager": "pnpm@10.14.0"
 }
