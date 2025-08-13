@@ -1,0 +1,18 @@
+name: Code Quality
+on: push
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: biomejs/setup-biome@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: biome ci .
+      - run: pnpm ts:check
+      - run: pnpm test

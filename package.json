@@ -1,33 +1,38 @@
 {
-  "name": "type-guardians",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "repository": "https://github.com/pchalupa/type-guardians",
-  "homepage": "https://github.com/pchalupa/type-guardians#readme",
-  "bugs": {
-    "url": "https://github.com/pchalupa/type-guardians/issues"
-  },
-  "author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    "./is-number": {
-      "import":"./is-number.ts",
-      "default":"./is-number.ts"
-    },
-    "./is-string": {
-      "import": "./is-string.ts",
-      "default": "./is-string.ts"
-    }
-  },
-  "scripts": {
-    "ts:check": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest watch"
-  },
-  "devDependencies": {
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
-  }
+	"name": "type-guardians",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"repository": "https://github.com/pchalupa/type-guardians",
+	"homepage": "https://github.com/pchalupa/type-guardians#readme",
+	"bugs": {
+		"url": "https://github.com/pchalupa/type-guardians/issues"
+	},
+	"author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		"./is-number": {
+			"import": "./is-number.ts",
+			"default": "./is-number.ts"
+		},
+		"./is-string": {
+			"import": "./is-string.ts",
+			"default": "./is-string.ts"
+		}
+	},
+	"scripts": {
+		"lint": "biome lint .",
+		"format": "biome format .",
+		"ts:check": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest watch",
+		"test:coverage": "vitest test --coverage"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.1.4",
+		"typescript": "^5.9.2",
+		"vitest": "^3.1.2"
+	},
+	"packageManager": "pnpm@10.14.0"
 }
