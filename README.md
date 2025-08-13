@@ -23,7 +23,7 @@ Type Guardian offers two types of functions for each data type: `is` functions f
 `is` functions are type guards that return a boolean value indicating whether the input value is of the expected type. You can use them in `if` statements to narrow down the type of a variable.
 
 ```typescript
-import { isString } from "type-guardians";
+import { isString } from "type-guardians/string";
 
 function greet(name: unknown) {
   if (isString(name)) {
@@ -40,7 +40,7 @@ function greet(name: unknown) {
 `assert` functions are assertions that throw a `TypeError` if the input value is not of the expected type. You can use them to ensure that a variable has a certain type before using it.
 
 ```typescript
-import { assertNumber } from "type-guardians";
+import { assertNumber } from "type-guardians/number";
 
 function double(value: unknown) {
   assertNumber(value);
