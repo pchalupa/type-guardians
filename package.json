@@ -21,19 +21,30 @@
 	"author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
 	"license": "MIT",
 	"type": "module",
+	"exports": {
+		"./string": "./string.ts",
+		"./number": "./number.ts"
+	},
 	"scripts": {
 		"lint": "biome lint .",
 		"format": "biome format .",
 		"ts:check": "tsc --noEmit",
 		"test": "vitest run",
 		"test:watch": "vitest watch",
-		"test:coverage": "vitest test --coverage"
+		"test:coverage": "vitest test --coverage",
+		"release": "auto shipit"
 	},
 	"devDependencies": {
+		"@auto-it/conventional-commits": "^11.3.0",
+		"@auto-it/npm": "^11.3.0",
 		"@biomejs/biome": "2.1.4",
 		"@vitest/coverage-v8": "3.1.2",
+		"auto": "^11.3.0",
 		"typescript": "^5.9.2",
 		"vitest": "^3.1.2"
+	},
+	"publishConfig": {
+		"provenance": true
 	},
 	"packageManager": "pnpm@10.14.0"
 }
