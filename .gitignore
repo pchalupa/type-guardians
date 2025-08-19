@@ -1,4 +1,7 @@
 node_modules
 
+# Tests
+coverage
+
 # OS
 .DS_Store
