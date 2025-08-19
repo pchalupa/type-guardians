@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
       - uses: biomejs/setup-biome@v2
       - uses: actions/setup-node@v4
@@ -16,3 +16,24 @@ jobs:
       - run: biome ci .
       - run: pnpm ts:check
       - run: pnpm test
+
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/type-guardians
+    if: ${{ !contains(github.event.head_commit.message, 'skip ci') }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ssh-key: ${{ secrets.SSH_KEY }}
+      - uses: pnpm/action-setup@v4
+      - run: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
