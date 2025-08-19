@@ -37,7 +37,7 @@ function greet(name: unknown) {
 
 ### `assert` functions
 
-`assert` functions are assertions that throw a `TypeError` if the input value is not of the expected type. You can use them to ensure that a variable has a certain type before using it.
+`assert` functions are assertions that throw a `TypeError` if the input value is not of the expected type. You can use them to ensure that a variable has a certain type before using it. You can also provide a custom error message as an optional second parameter.
 
 ```typescript
 import { assertNumber } from "type-guardians/number";
@@ -54,9 +54,9 @@ function double(value: unknown) {
 ### String
 
 - `isString(value: unknown): value is string`
-- `assertString(value: unknown): asserts value is string`
+- `assertString(value: unknown, message?: string): asserts value is string`
 
 ### Number
 
 - `isNumber(value: unknown): value is number`
-- `assertNumber(value: unknown): asserts value is number`
+- `assertNumber(value: unknown, message?: string): asserts value is number`
