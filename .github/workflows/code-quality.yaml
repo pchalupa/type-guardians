@@ -33,6 +33,11 @@ jobs:
           fetch-depth: 0
           ssh-key: ${{ secrets.SSH_KEY }}
       - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - run: pnpm install
       - run: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
