@@ -28,5 +28,12 @@ describe("string", () => {
 		it.each(["", "string"])("should not throw type error %s", (value) => {
 			expect(() => assertString(value)).not.toThrow();
 		});
+
+		it("should throw custom error message", () => {
+			const customMessage = "Custom error message";
+
+			expect(() => assertString(123, customMessage)).toThrow(TypeError);
+			expect(() => assertString(123, customMessage)).toThrow(customMessage);
+		});
 	});
 });

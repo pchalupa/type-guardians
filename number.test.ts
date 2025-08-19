@@ -29,6 +29,13 @@ describe("number", () => {
 			it.each([0, NaN, Infinity])("should not throw type error %s", (value) => {
 				expect(() => assertNumber(value)).not.toThrow();
 			});
+
+			it("should throw custom error message", () => {
+				const customMessage = "Custom error message";
+
+				expect(() => assertNumber("123", customMessage)).toThrow(TypeError);
+				expect(() => assertNumber("123", customMessage)).toThrow(customMessage);
+			});
 		});
 	});
 });
