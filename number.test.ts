@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { assertNumber, isNumber } from "./number";
 
 describe("number", () => {
-	describe("isUmber", () => {
+	describe("isNumber", () => {
 		it("should return true", () => {
 			expect(isNumber(NaN)).toBe(true);
 			expect(isNumber(Infinity)).toBe(true);
