@@ -6,5 +6,5 @@ export function assertString(
 	value: unknown,
 	message = `Expected a string, received ${typeof value}`,
 ): asserts value is string {
-	if (typeof value !== "string") throw new TypeError(message);
+	if (!isString(value)) throw new TypeError(message);
 }

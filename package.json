@@ -23,7 +23,8 @@
 	"type": "module",
 	"exports": {
 		"./string": "./string.ts",
-		"./number": "./number.ts"
+		"./number": "./number.ts",
+		"./error": "./error.ts"
 	},
 	"scripts": {
 		"lint": "biome lint .",
