@@ -28,6 +28,7 @@ jobs:
       name: npm
       url: https://www.npmjs.com/package/type-guardians
     if: ${{ !contains(github.event.head_commit.message, 'skip ci') }}
+    needs: code-quality
     steps:
       - uses: actions/checkout@v5
         with:
