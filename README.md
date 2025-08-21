@@ -60,3 +60,8 @@ function double(value: unknown) {
 
 - `isNumber(value: unknown): value is number`
 - `assertNumber(value: unknown, message?: string): asserts value is number`
+
+### Error
+
+- `isError(value: unknown): value is Error`
+- `assertError(value: unknown, message?: string): asserts value is Error`
