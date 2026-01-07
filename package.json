@@ -1,6 +1,6 @@
 {
 	"name": "type-guardians",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"description": "A lightweight, zero-dependency TypeScript library providing type guards and assertions for safer and more readable code",
 	"keywords": [
 		"typescript",
