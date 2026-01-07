@@ -1,2 +1,8 @@
 *.test.ts
+
+.github
+.autorc
 biome.json
+
+CHANGELOG.md
+README.md
