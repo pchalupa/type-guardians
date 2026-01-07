@@ -13,7 +13,10 @@
 		"guards",
 		"validation"
 	],
-	"repository": "https://github.com/pchalupa/type-guardians",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pchalupa/type-guardians.git"
+	},
 	"homepage": "https://github.com/pchalupa/type-guardians#readme",
 	"bugs": {
 		"url": "https://github.com/pchalupa/type-guardians/issues"
