@@ -38,22 +38,16 @@ describe("assertDefined", () => {
 
 	it("should throw for undefined", () => {
 		expect(() => assertDefined(undefined)).toThrow(TypeError);
-		expect(() => assertDefined(undefined)).toThrow(
-			"Expected a defined value, received undefined or null",
-		);
+		expect(() => assertDefined(undefined)).toThrow("Expected a defined value, received undefined or null");
 	});
 
 	it("should throw for null", () => {
 		expect(() => assertDefined(null)).toThrow(TypeError);
-		expect(() => assertDefined(null)).toThrow(
-			"Expected a defined value, received undefined or null",
-		);
+		expect(() => assertDefined(null)).toThrow("Expected a defined value, received undefined or null");
 	});
 
 	it("should throw with custom message", () => {
-		expect(() => assertDefined(undefined, "Custom error")).toThrow(
-			"Custom error",
-		);
+		expect(() => assertDefined(undefined, "Custom error")).toThrow("Custom error");
 	});
 
 	it("should narrow type correctly", () => {
